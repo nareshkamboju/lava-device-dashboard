@@ -98,6 +98,26 @@
 const DATA = __DATA__;
 const PALETTE = ["#38bdf8","#a78bfa","#34d399","#fbbf24","#f472b6","#f87171",
   "#22d3ee","#c084fc","#4ade80","#facc15","#fb923c","#60a5fa","#e879f9"];
+// Build a synthetic "All" group = union of every real group.
+(function buildAllGroup(){
+  const real = Object.keys(DATA.groups);
+  if(real.length < 2 || DATA.groups["All"]) return;
+  const rows = [];
+  real.forEach(k => DATA.groups[k].rows.forEach(r => rows.push(r)));
+  const types = {}; const workers = new Set(); let online = 0;
+  rows.forEach(r => {
+    types[r.type] = (types[r.type]||0) + 1;
+    workers.add(r.worker);
+    if((r.health||"").toLowerCase().startsWith("good")) online++;
+  });
+  const sortedTypes = {};
+  Object.entries(types).sort((a,b)=> b[1]-a[1] || a[0].localeCompare(b[0]))
+    .forEach(([k,v]) => sortedTypes[k]=v);
+  const ordered = {"All": {rows, summary:{devices:rows.length, workers:workers.size, online, types:sortedTypes}}};
+  real.forEach(k => ordered[k] = DATA.groups[k]);
+  DATA.groups = ordered;
+})();
+
 const groupKeys = Object.keys(DATA.groups);
 let current = groupKeys[0];
 let sortKey = "worker", sortDir = 1;
@@ -119,8 +139,9 @@ function healthClass(h){
 
 function renderKpis(){
   const g = DATA.groups[current].summary;
-  const totalDev = groupKeys.reduce((a,k)=>a+DATA.groups[k].summary.devices,0);
-  const totalWk = groupKeys.reduce((a,k)=>a+DATA.groups[k].summary.workers,0);
+  const realKeys = groupKeys.filter(k => k !== "All");
+  const totalDev = realKeys.reduce((a,k)=>a+DATA.groups[k].summary.devices,0);
+  const totalWk = realKeys.reduce((a,k)=>a+DATA.groups[k].summary.workers,0);
   const kpis = [
     ["k1", g.devices, current + " devices"],
     ["k2", g.workers, current + " workers"],
@@ -133,13 +154,14 @@ function renderKpis(){
 }
 
 function renderTotals(){
-  const parts = groupKeys.map(k=>{
+  const realKeys = groupKeys.filter(k => k !== "All");
+  const parts = realKeys.map(k=>{
     const s = DATA.groups[k].summary;
     const on = (s.online!=null) ? ` <span style="font-size:13px;color:#34d399">(${s.online} good)</span>` : "";
     return `<div class="tot"><div class="n">${s.devices}${on}</div><div class="l">${k}</div></div>`;
   });
-  const grand = groupKeys.reduce((a,k)=>a+DATA.groups[k].summary.devices,0);
-  const grandOn = groupKeys.reduce((a,k)=>a+(DATA.groups[k].summary.online||0),0);
+  const grand = realKeys.reduce((a,k)=>a+DATA.groups[k].summary.devices,0);
+  const grandOn = realKeys.reduce((a,k)=>a+(DATA.groups[k].summary.online||0),0);
   parts.push(`<div class="tot grand"><div class="n">${grand} <span style="font-size:13px;color:#a5b4fc">(${grandOn} good)</span></div><div class="l">Total devices</div></div>`);
   document.getElementById("totals").innerHTML = parts.join("");
 }
