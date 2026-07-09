@@ -27,6 +27,14 @@
   .kpi .l{color:var(--muted);margin-top:8px;font-size:13px;text-transform:uppercase;letter-spacing:.5px;}
   .kpi .bar{position:absolute;left:0;top:0;bottom:0;width:6px;}
   .k1 .bar{background:#38bdf8}.k2 .bar{background:#a78bfa}.k3 .bar{background:#34d399}.k4 .bar{background:#fbbf24}
+  .totals{display:flex;flex-wrap:wrap;gap:12px;align-items:stretch;margin:18px 0 6px;}
+  .tot{border-radius:14px;padding:14px 18px;background:var(--card);border:1px solid var(--line);
+    box-shadow:0 6px 20px rgba(0,0,0,.35);display:flex;flex-direction:column;gap:4px;min-width:170px;}
+  .tot .n{font-size:26px;font-weight:800;line-height:1;}
+  .tot .l{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.5px;}
+  .tot.grand{background:linear-gradient(135deg,#1e293b,#312e81);border-color:#6366f1;}
+  .tot.grand .n{background:linear-gradient(90deg,#38bdf8,#818cf8,#f472b6);
+    -webkit-background-clip:text;background-clip:text;color:transparent;}
   .grid{display:grid;grid-template-columns:1.1fr 1fr;gap:20px;margin-bottom:26px;}
   @media(max-width:900px){.grid{grid-template-columns:1fr}}
   .panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;
@@ -58,6 +66,7 @@
   <div class="sub" id="sub"></div>
 </header>
 <div class="wrap">
+  <div class="totals" id="totals"></div>
   <div class="kpis" id="kpis"></div>
   <div class="grid">
     <div class="panel"><h2>Devices by Type</h2><canvas id="typeChart" height="230"></canvas><div class="legend" id="legend"></div></div>
@@ -109,6 +118,16 @@ function renderKpis(){
   document.getElementById("kpis").innerHTML = kpis.map(k=>
     `<div class="kpi ${k[0]}"><div class="bar"></div><div class="n">${k[1]}</div><div class="l">${k[2]}</div></div>`
   ).join("");
+}
+
+function renderTotals(){
+  const parts = groupKeys.map(k=>{
+    const s = DATA.groups[k].summary;
+    return `<div class="tot"><div class="n">${s.devices}</div><div class="l">${k}</div></div>`;
+  });
+  const grand = groupKeys.reduce((a,k)=>a+DATA.groups[k].summary.devices,0);
+  parts.push(`<div class="tot grand"><div class="n">${grand}</div><div class="l">Total devices</div></div>`);
+  document.getElementById("totals").innerHTML = parts.join("");
 }
 
 let typeChart, workerChart;
@@ -170,7 +189,7 @@ function renderTabs(){
   });
 }
 
-function renderAll(){ renderTabs(); renderKpis(); renderCharts(); renderTable(); }
+function renderAll(){ renderTotals(); renderTabs(); renderKpis(); renderCharts(); renderTable(); }
 
 document.getElementById("search").addEventListener("input", renderTable);
 document.querySelectorAll("#tbl th").forEach(th=>th.onclick=()=>{
