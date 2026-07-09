@@ -6,12 +6,34 @@ and parses the "Devices Attached" table plus the worker State/Health, producing 
 data.json compatible with the dashboard.
 
 Usage:  python3 lava_scrape.py ./out
-Run from a checkout that contains worker-configs/ and dashboard_template.html.
+
+worker-configs/ is discovered in this order:
+  1. $WORKER_CONFIGS_DIR (if set)
+  2. ./worker-configs next to this script
+  3. ../lava-dispatcher-config/worker-configs (sibling checkout)
 """
 import glob, html, json, os, re, sys, datetime, urllib.request
 
 BASE = "https://lava.infra.foundries.io"
-ROOT = "worker-configs"
+HERE = os.path.dirname(os.path.abspath(__file__))
+
+
+def find_worker_configs():
+    candidates = [
+        os.environ.get("WORKER_CONFIGS_DIR"),
+        os.path.join(HERE, "worker-configs"),
+        os.path.join(os.path.dirname(HERE), "lava-dispatcher-config", "worker-configs"),
+    ]
+    for c in candidates:
+        if c and os.path.isdir(c):
+            return c
+    raise SystemExit(
+        "ERROR: could not find worker-configs/. Set WORKER_CONFIGS_DIR, or place a "
+        "lava-dispatcher-config checkout next to this repo."
+    )
+
+
+ROOT = find_worker_configs()
 OUT = sys.argv[1] if len(sys.argv) > 1 else "/tmp/lava-device-dashboard"
 
 # Groups: which worker-name prefixes belong to which dashboard tab.
@@ -140,7 +162,7 @@ def main():
     with open(os.path.join(OUT, "data.json"), "w") as f:
         json.dump(data, f, indent=2)
 
-    with open("dashboard_template.html") as tf:
+    with open(os.path.join(HERE, "dashboard_template.html")) as tf:
         tmpl = tf.read()
     with open(os.path.join(OUT, "index.html"), "w") as f:
         f.write(tmpl.replace("__DATA__", json.dumps(data)))

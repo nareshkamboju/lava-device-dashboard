@@ -1,29 +1,29 @@
 #!/usr/bin/env bash
 # Regenerate the LAVA HYD device dashboard and publish it to GitHub Pages.
 #
-# Layout assumption:
-#   <lava-dispatcher-config>/                          <- worker-configs/ + gen_dashboard.py
-#   <lava-dispatcher-config>/lava-device-dashboard/    <- this Pages repo (run from here)
+# This repo is self-contained: it ships lava_scrape.py + dashboard_template.html.
+# It only needs a worker-configs/ directory, found via (in order):
+#   1. $WORKER_CONFIGS_DIR
+#   2. ./worker-configs inside this repo
+#   3. ../lava-dispatcher-config/worker-configs (sibling checkout)
 #
 # Usage:  ./deploy.sh ["optional commit message"]
 set -euo pipefail
 
 # Directory of this script = the Pages repo root.
 PAGES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-# Source checkout with worker-configs + gen_dashboard.py (the parent dir).
-SRC_DIR="$(dirname "$PAGES_DIR")"
 OUT_DIR="$(mktemp -d)"
 MSG="${1:-Regenerate dashboard data}"
 
 trap 'rm -rf "$OUT_DIR"' EXIT
 
-if [[ ! -f "$SRC_DIR/lava_scrape.py" || ! -d "$SRC_DIR/worker-configs" ]]; then
-  echo "ERROR: expected lava_scrape.py and worker-configs/ in: $SRC_DIR" >&2
+if [[ ! -f "$PAGES_DIR/lava_scrape.py" ]]; then
+  echo "ERROR: lava_scrape.py not found in: $PAGES_DIR" >&2
   exit 1
 fi
 
-echo ">> Scraping live device data from LAVA ($SRC_DIR)"
-( cd "$SRC_DIR" && python3 lava_scrape.py "$OUT_DIR" )
+echo ">> Scraping live device data from LAVA"
+python3 "$PAGES_DIR/lava_scrape.py" "$OUT_DIR"
 
 echo ">> Copying generated files into: $PAGES_DIR"
 cp -f "$OUT_DIR/data.json"  "$PAGES_DIR/data.json"
