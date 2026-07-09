@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-09 08:10",
+  "generated": "2026-07-09 08:19",
   "source": "live: lava.infra.foundries.io/scheduler/worker/<name>",
   "groups": {
     "hyd-workers": {
