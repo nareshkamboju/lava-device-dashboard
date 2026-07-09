@@ -17,13 +17,13 @@ MSG="${1:-Regenerate dashboard data}"
 
 trap 'rm -rf "$OUT_DIR"' EXIT
 
-if [[ ! -f "$SRC_DIR/gen_dashboard.py" || ! -d "$SRC_DIR/worker-configs" ]]; then
-  echo "ERROR: expected gen_dashboard.py and worker-configs/ in: $SRC_DIR" >&2
+if [[ ! -f "$SRC_DIR/lava_scrape.py" || ! -d "$SRC_DIR/worker-configs" ]]; then
+  echo "ERROR: expected lava_scrape.py and worker-configs/ in: $SRC_DIR" >&2
   exit 1
 fi
 
-echo ">> Regenerating dashboard from: $SRC_DIR"
-( cd "$SRC_DIR" && python3 gen_dashboard.py "$OUT_DIR" )
+echo ">> Scraping live device data from LAVA ($SRC_DIR)"
+( cd "$SRC_DIR" && python3 lava_scrape.py "$OUT_DIR" )
 
 echo ">> Copying generated files into: $PAGES_DIR"
 cp -f "$OUT_DIR/data.json"  "$PAGES_DIR/data.json"

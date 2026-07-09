@@ -58,6 +58,9 @@
   .legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
   .legend span{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px;}
   .dot{width:10px;height:10px;border-radius:3px;display:inline-block;}
+  td.ok{color:#34d399;font-weight:700;}
+  td.bad{color:#f87171;font-weight:700;}
+  td.warn{color:#fbbf24;font-weight:700;}
 </style>
 </head>
 <body>
@@ -75,14 +78,15 @@
   <div class="panel">
     <div class="tabs" id="tabs"></div>
     <div class="toolbar">
-      <input type="search" id="search" placeholder="Filter by worker, device, type or banner…" />
+      <input type="search" id="search" placeholder="Filter by worker, device, type, state or health…" />
       <span class="sub" id="count"></span>
     </div>
     <div class="tablewrap">
       <table id="tbl">
         <thead><tr>
           <th data-k="worker">Worker</th><th data-k="device">Device</th>
-          <th data-k="type">Type</th><th data-k="banner">Banner</th>
+          <th data-k="type">Type</th><th data-k="state">State</th>
+          <th data-k="health">Health</th>
         </tr></thead>
         <tbody id="tbody"></tbody>
       </table>
@@ -105,6 +109,14 @@ document.getElementById("foot").textContent =
 
 function colorFor(type, idx){ return PALETTE[idx % PALETTE.length]; }
 
+function healthClass(h){
+  h = (h||"").toLowerCase();
+  if(h.startsWith("good")) return "ok";
+  if(h.startsWith("bad")||h.startsWith("offline")) return "bad";
+  if(h.startsWith("maintenance")) return "warn";
+  return "";
+}
+
 function renderKpis(){
   const g = DATA.groups[current].summary;
   const totalDev = groupKeys.reduce((a,k)=>a+DATA.groups[k].summary.devices,0);
@@ -123,10 +135,12 @@ function renderKpis(){
 function renderTotals(){
   const parts = groupKeys.map(k=>{
     const s = DATA.groups[k].summary;
-    return `<div class="tot"><div class="n">${s.devices}</div><div class="l">${k}</div></div>`;
+    const on = (s.online!=null) ? ` <span style="font-size:13px;color:#34d399">(${s.online} good)</span>` : "";
+    return `<div class="tot"><div class="n">${s.devices}${on}</div><div class="l">${k}</div></div>`;
   });
   const grand = groupKeys.reduce((a,k)=>a+DATA.groups[k].summary.devices,0);
-  parts.push(`<div class="tot grand"><div class="n">${grand}</div><div class="l">Total devices</div></div>`);
+  const grandOn = groupKeys.reduce((a,k)=>a+(DATA.groups[k].summary.online||0),0);
+  parts.push(`<div class="tot grand"><div class="n">${grand} <span style="font-size:13px;color:#a5b4fc">(${grandOn} good)</span></div><div class="l">Total devices</div></div>`);
   document.getElementById("totals").innerHTML = parts.join("");
 }
 
@@ -169,7 +183,7 @@ function renderTable(){
   const q = document.getElementById("search").value.toLowerCase();
   const cmap = typeColorMap();
   let rows = g.rows.filter(r=>
-    [r.worker,r.device,r.type,r.banner].join(" ").toLowerCase().includes(q));
+    [r.worker,r.device,r.type,r.state,r.health].join(" ").toLowerCase().includes(q));
   rows.sort((a,b)=>{
     const x=(a[sortKey]||"").toString().toLowerCase(), y=(b[sortKey]||"").toString().toLowerCase();
     return x<y?-sortDir:x>y?sortDir:0;
@@ -177,7 +191,8 @@ function renderTable(){
   document.getElementById("tbody").innerHTML = rows.map(r=>
     `<tr><td>${r.worker}</td><td>${r.device}</td>
      <td><span class="pill" style="background:${cmap[r.type]||'#64748b'}">${r.type}</span></td>
-     <td>${r.banner}</td></tr>`).join("");
+     <td>${r.state||''}</td>
+     <td class="${healthClass(r.health)}">${r.health||''}</td></tr>`).join("");
   document.getElementById("count").textContent = rows.length + " rows";
 }
 
