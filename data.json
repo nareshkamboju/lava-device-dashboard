@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-09 07:58",
+  "generated": "2026-07-09 08:10",
   "source": "live: lava.infra.foundries.io/scheduler/worker/<name>",
   "groups": {
     "hyd-workers": {
@@ -100,7 +100,7 @@
           "worker_health": "Active",
           "device": "rb8-hyd-02",
           "type": "lemans-evk",
-          "state": "Running # 311338 boot test (iq-9075-evk) 29013378616 [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
