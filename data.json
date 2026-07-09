@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-09 07:06",
+  "generated": "2026-07-09 07:16",
   "source": "qualcomm-linux/lava-dispatcher-config @ shikra-FTDI-update",
   "groups": {
     "hyd-workers": {
