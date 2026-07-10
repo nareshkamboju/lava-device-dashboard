@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-10 06:00",
+  "generated": "2026-07-10 12:00",
   "source": "live: lava.infra.foundries.io/scheduler/worker/<name>",
   "groups": {
     "hyd-workers": {
@@ -311,8 +311,17 @@
           "worker_health": "Active",
           "device": "glymur-hyd-06",
           "type": "glymur-crd",
-          "state": "Idle",
-          "health": "Good"
+          "state": "",
+          "health": "Bad"
+        },
+        {
+          "worker": "ostt-lts-hyd-03",
+          "worker_state": "Online",
+          "worker_health": "Active",
+          "device": "qcs615-adp-air-05",
+          "type": "qcs615-ride",
+          "state": "",
+          "health": "Bad"
         },
         {
           "worker": "ostt-lts-hyd-04",
@@ -378,6 +387,33 @@
           "health": "Good"
         },
         {
+          "worker": "ostt-lts-hyd-09",
+          "worker_state": "Online",
+          "worker_health": "Active",
+          "device": "glymur-hyd-02",
+          "type": "glymur-crd",
+          "state": "",
+          "health": "Maintenance"
+        },
+        {
+          "worker": "ostt-lts-hyd-09",
+          "worker_state": "Online",
+          "worker_health": "Active",
+          "device": "hamoa-iot-evk-06",
+          "type": "hamoa-iot-evk",
+          "state": "Idle",
+          "health": "Good"
+        },
+        {
+          "worker": "ostt-lts-hyd-11",
+          "worker_state": "Online",
+          "worker_health": "Active",
+          "device": "qcs615-adp-air-06",
+          "type": "qcs615-ride",
+          "state": "",
+          "health": "Bad"
+        },
+        {
           "worker": "ostt-lts-hyd-11",
           "worker_state": "Online",
           "worker_health": "Active",
@@ -388,17 +424,18 @@
         }
       ],
       "summary": {
-        "devices": 14,
-        "workers": 9,
+        "devices": 18,
+        "workers": 10,
         "online": 14,
         "types": {
+          "glymur-crd": 3,
           "lemans-evk": 3,
-          "glymur-crd": 2,
+          "hamoa-iot-evk": 2,
           "kaanapali-mtp": 2,
           "monaco-evk": 2,
+          "qcs615-ride": 2,
           "qrb2210-arduino-imola": 2,
-          "shikra-iqs-evk": 2,
-          "hamoa-iot-evk": 1
+          "shikra-iqs-evk": 2
         }
       }
     }
