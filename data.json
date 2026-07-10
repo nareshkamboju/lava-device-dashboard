@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-10 00:00",
+  "generated": "2026-07-10 06:00",
   "source": "live: lava.infra.foundries.io/scheduler/worker/<name>",
   "groups": {
     "hyd-workers": {
@@ -46,7 +46,7 @@
           "worker_health": "Active",
           "device": "hamoa-iot-evk-04",
           "type": "hamoa-iot-evk",
-          "state": "Running # 311830 meta-qcom-qcom-distro-29074060595-1-pre-merge-display-gfx [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -55,7 +55,7 @@
           "worker_health": "Active",
           "device": "rb3g2-hyd-01",
           "type": "qcs6490-rb3gen2",
-          "state": "Running # 311874 meta-qcom-qcom-distro-29074060595-1-pre-merge-gstr-video [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -91,8 +91,8 @@
           "worker_health": "Active",
           "device": "shikra-hyd-07",
           "type": "shikra-iqs-evk",
-          "state": "",
-          "health": "Maintenance"
+          "state": "Idle",
+          "health": "Good"
         },
         {
           "worker": "hyd-worker-11",
@@ -100,8 +100,8 @@
           "worker_health": "Active",
           "device": "rb8-hyd-02",
           "type": "lemans-evk",
-          "state": "",
-          "health": "Maintenance"
+          "state": "Idle",
+          "health": "Good"
         },
         {
           "worker": "hyd-worker-12",
@@ -127,8 +127,8 @@
           "worker_health": "Active",
           "device": "shikra-hyd-03",
           "type": "shikra-iqs-evk",
-          "state": "",
-          "health": "Maintenance"
+          "state": "Idle",
+          "health": "Good"
         },
         {
           "worker": "hyd-worker-16",
@@ -136,8 +136,8 @@
           "worker_health": "Active",
           "device": "shikra-hyd-04",
           "type": "shikra-iqs-evk",
-          "state": "",
-          "health": "Maintenance"
+          "state": "Idle",
+          "health": "Good"
         },
         {
           "worker": "hyd-worker-17",
@@ -208,7 +208,7 @@
           "worker_health": "Active",
           "device": "rb4-hyd-03",
           "type": "monaco-evk",
-          "state": "Running # 311875 meta-qcom-qcom-distro-29074060595-1-pre-merge-display-gfx [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -217,8 +217,8 @@
           "worker_health": "Active",
           "device": "pakala-hyd-06",
           "type": "sm8750-mtp",
-          "state": "",
-          "health": "Maintenance"
+          "state": "Idle",
+          "health": "Good"
         },
         {
           "worker": "hyd-worker-24",
@@ -242,7 +242,7 @@
       "summary": {
         "devices": 26,
         "workers": 20,
-        "online": 18,
+        "online": 23,
         "types": {
           "shikra-iqs-evk": 4,
           "sm8750-mtp": 4,
@@ -275,8 +275,8 @@
           "worker_health": "Active",
           "device": "shikra-hyd-05",
           "type": "shikra-iqs-evk",
-          "state": "",
-          "health": "Maintenance"
+          "state": "Idle",
+          "health": "Good"
         },
         {
           "worker": "ostt-lts-hyd-01",
@@ -378,45 +378,27 @@
           "health": "Good"
         },
         {
-          "worker": "ostt-lts-hyd-09",
-          "worker_state": "Online",
-          "worker_health": "Active",
-          "device": "glymur-hyd-02",
-          "type": "glymur-crd",
-          "state": "Idle",
-          "health": "Good"
-        },
-        {
-          "worker": "ostt-lts-hyd-09",
-          "worker_state": "Online",
-          "worker_health": "Active",
-          "device": "hamoa-iot-evk-06",
-          "type": "hamoa-iot-evk",
-          "state": "Idle",
-          "health": "Good"
-        },
-        {
           "worker": "ostt-lts-hyd-11",
           "worker_state": "Online",
           "worker_health": "Active",
           "device": "shikra-hyd-06",
           "type": "shikra-iqs-evk",
-          "state": "",
-          "health": "Maintenance"
+          "state": "Idle",
+          "health": "Good"
         }
       ],
       "summary": {
-        "devices": 16,
-        "workers": 10,
+        "devices": 14,
+        "workers": 9,
         "online": 14,
         "types": {
-          "glymur-crd": 3,
           "lemans-evk": 3,
-          "hamoa-iot-evk": 2,
+          "glymur-crd": 2,
           "kaanapali-mtp": 2,
           "monaco-evk": 2,
           "qrb2210-arduino-imola": 2,
-          "shikra-iqs-evk": 2
+          "shikra-iqs-evk": 2,
+          "hamoa-iot-evk": 1
         }
       }
     }
