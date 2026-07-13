@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-13 06:01",
+  "generated": "2026-07-13 12:00",
   "source": "live: lava.infra.foundries.io/scheduler/worker/<name>",
   "groups": {
     "hyd-workers": {
@@ -37,7 +37,7 @@
           "worker_health": "Active",
           "device": "lemans-hyd-01",
           "type": "qcs9100-ride",
-          "state": "Running # 314899 meta-qcom-qcom-distro-29251870836-1-boot test [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -46,7 +46,7 @@
           "worker_health": "Active",
           "device": "hamoa-iot-evk-04",
           "type": "hamoa-iot-evk",
-          "state": "Running # 314897 meta-qcom-qcom-distro-29251870836-1-boot test [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -55,7 +55,7 @@
           "worker_health": "Active",
           "device": "rb3g2-hyd-01",
           "type": "qcs6490-rb3gen2",
-          "state": "Running # 314891 meta-qcom-qcom-distro-29251870836-1-boot test [q-github-bot]",
+          "state": "Running # 315720 meta-qcom-qcom-distro-29276427686-1-boot test [q-github-bot]",
           "health": "Good"
         },
         {
@@ -82,7 +82,7 @@
           "worker_health": "Active",
           "device": "qcs8300-ride-hyd-01",
           "type": "monaco-ride",
-          "state": "Running # 314908 meta-qcom-qcom-distro-29251870836-1-boot test [q-github-bot]",
+          "state": "Running # 315722 meta-qcom-qcom-distro-29276427686-1-boot test [q-github-bot]",
           "health": "Good"
         },
         {
@@ -118,7 +118,7 @@
           "worker_health": "Active",
           "device": "qcs8300-ride-hyd-02",
           "type": "monaco-ride",
-          "state": "Running # 314887 meta-qcom-qcom-distro-29251870836-1-boot test [q-github-bot]",
+          "state": "Running # 315713 meta-qcom-qcom-distro-29276427686-1-boot test [q-github-bot]",
           "health": "Good"
         },
         {
@@ -145,7 +145,7 @@
           "worker_health": "Active",
           "device": "rb8-hyd-03",
           "type": "lemans-evk",
-          "state": "Idle",
+          "state": "Running # 315706 meta-qcom-qcom-distro-29276427686-1-boot test [q-github-bot]",
           "health": "Good"
         },
         {
@@ -172,7 +172,7 @@
           "worker_health": "Active",
           "device": "kaanapali-mtp-03",
           "type": "kaanapali-mtp",
-          "state": "Running # 314870 meta-qcom-qcom-distro-29251481863-1-boot test [q-github-bot]",
+          "state": "Running # 315723 meta-qcom-qcom-distro-29276427686-1-boot test [q-github-bot]",
           "health": "Good"
         },
         {
@@ -190,7 +190,7 @@
           "worker_health": "Active",
           "device": "glymur-hyd-03",
           "type": "glymur-crd",
-          "state": "Running # 314906 meta-qcom-qcom-distro-29251870836-1-boot test [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -208,7 +208,7 @@
           "worker_health": "Active",
           "device": "rb4-hyd-03",
           "type": "monaco-evk",
-          "state": "Running # 314888 meta-qcom-qcom-distro-29251870836-1-boot test [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -266,7 +266,7 @@
           "worker_health": "Active",
           "device": "rb4-hyd-04",
           "type": "monaco-evk",
-          "state": "Running # 314910 meta-qcom-qcom-distro-29251870836-1-boot test [q-github-bot]",
+          "state": "Running # 315717 meta-qcom-qcom-distro-29276427686-1-boot test [q-github-bot]",
           "health": "Good"
         },
         {
@@ -293,7 +293,7 @@
           "worker_health": "Active",
           "device": "rb4-hyd-05",
           "type": "monaco-evk",
-          "state": "Running # 314886 meta-qcom-qcom-distro-29251870836-1-boot test [q-github-bot]",
+          "state": "Running # 315700 meta-qcom-qcom-distro-29276427686-1-boot test [q-github-bot]",
           "health": "Good"
         },
         {
@@ -311,7 +311,7 @@
           "worker_health": "Active",
           "device": "glymur-hyd-06",
           "type": "glymur-crd",
-          "state": "Idle",
+          "state": "Running # 315716 meta-qcom-qcom-distro-29276427686-1-boot test [q-github-bot]",
           "health": "Good"
         },
         {
@@ -338,7 +338,7 @@
           "worker_health": "Active",
           "device": "kaanapali-mtp-05",
           "type": "kaanapali-mtp",
-          "state": "Running # 314894 meta-qcom-qcom-distro-29251870836-1-boot test [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -347,7 +347,7 @@
           "worker_health": "Active",
           "device": "hamoa-iot-evk-07",
           "type": "hamoa-iot-evk",
-          "state": "Idle",
+          "state": "Running # 315703 meta-qcom-qcom-distro-29276427686-1-boot test [q-github-bot]",
           "health": "Good"
         },
         {
@@ -374,7 +374,7 @@
           "worker_health": "Active",
           "device": "rb8-hyd-07",
           "type": "lemans-evk",
-          "state": "Running # 314890 meta-qcom-qcom-distro-29251870836-1-boot test [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -383,7 +383,7 @@
           "worker_health": "Active",
           "device": "rb8-hyd-08",
           "type": "lemans-evk",
-          "state": "Running # 314904 meta-qcom-qcom-distro-29251870836-1-boot test [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -401,7 +401,7 @@
           "worker_health": "Active",
           "device": "hamoa-iot-evk-06",
           "type": "hamoa-iot-evk",
-          "state": "Running # 314902 meta-qcom-qcom-distro-29251870836-1-boot test [q-github-bot]",
+          "state": "Running # 315725 meta-qcom-qcom-distro-29276427686-1-boot test [q-github-bot]",
           "health": "Good"
         },
         {
@@ -410,8 +410,8 @@
           "worker_health": "Active",
           "device": "qcs615-adp-air-06",
           "type": "qcs615-ride",
-          "state": "",
-          "health": "Bad"
+          "state": "Running # 315719 meta-qcom-qcom-distro-29276427686-1-boot test [q-github-bot]",
+          "health": "Good"
         },
         {
           "worker": "ostt-lts-hyd-11",
@@ -426,7 +426,7 @@
       "summary": {
         "devices": 18,
         "workers": 10,
-        "online": 14,
+        "online": 15,
         "types": {
           "glymur-crd": 3,
           "lemans-evk": 3,
