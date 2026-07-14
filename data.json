@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-13 18:00",
+  "generated": "2026-07-14 00:01",
   "source": "live: lava.infra.foundries.io/scheduler/worker/<name>",
   "groups": {
     "hyd-workers": {
@@ -37,7 +37,7 @@
           "worker_health": "Active",
           "device": "lemans-hyd-01",
           "type": "qcs9100-ride",
-          "state": "Idle",
+          "state": "Running # 317286 meta-qcom-qcom-distro-29313051401-1-boot test [q-github-bot]",
           "health": "Good"
         },
         {
@@ -55,7 +55,7 @@
           "worker_health": "Active",
           "device": "rb3g2-hyd-01",
           "type": "qcs6490-rb3gen2",
-          "state": "Idle",
+          "state": "Running # 317202 meta-qcom-qcom-distro-29308231527-1-pre-merge-bt [q-github-bot]",
           "health": "Good"
         },
         {
@@ -82,7 +82,7 @@
           "worker_health": "Active",
           "device": "qcs8300-ride-hyd-01",
           "type": "monaco-ride",
-          "state": "Idle",
+          "state": "Running # 317282 meta-qcom-qcom-distro-29313051401-1-boot test [q-github-bot]",
           "health": "Good"
         },
         {
@@ -106,11 +106,11 @@
         {
           "worker": "hyd-worker-12",
           "worker_state": "Online",
-          "worker_health": "Active",
+          "worker_health": "Maintenance",
           "device": "shikra-hyd-02",
           "type": "shikra-iqs-evk",
           "state": "",
-          "health": "Maintenance"
+          "health": "Bad"
         },
         {
           "worker": "hyd-worker-14",
@@ -118,7 +118,7 @@
           "worker_health": "Active",
           "device": "qcs8300-ride-hyd-02",
           "type": "monaco-ride",
-          "state": "Idle",
+          "state": "Running # 317276 meta-qcom-qcom-distro-29313051401-1-boot test [q-github-bot]",
           "health": "Good"
         },
         {
@@ -145,7 +145,7 @@
           "worker_health": "Active",
           "device": "rb8-hyd-03",
           "type": "lemans-evk",
-          "state": "Idle",
+          "state": "Running # 317274 meta-qcom-qcom-distro-29313051401-1-boot test [q-github-bot]",
           "health": "Good"
         },
         {
@@ -172,7 +172,7 @@
           "worker_health": "Active",
           "device": "kaanapali-mtp-03",
           "type": "kaanapali-mtp",
-          "state": "Idle",
+          "state": "Running # 317290 meta-qcom-qcom-distro-29313051401-1-boot test [q-github-bot]",
           "health": "Good"
         },
         {
@@ -190,7 +190,7 @@
           "worker_health": "Active",
           "device": "glymur-hyd-03",
           "type": "glymur-crd",
-          "state": "Idle",
+          "state": "Running # 317291 meta-qcom-qcom-distro-29313051401-1-boot test [q-github-bot]",
           "health": "Good"
         },
         {
@@ -208,7 +208,7 @@
           "worker_health": "Active",
           "device": "rb4-hyd-03",
           "type": "monaco-evk",
-          "state": "Idle",
+          "state": "Running # 317284 meta-qcom-qcom-distro-29313051401-1-boot test [q-github-bot]",
           "health": "Good"
         },
         {
@@ -266,7 +266,7 @@
           "worker_health": "Active",
           "device": "rb4-hyd-04",
           "type": "monaco-evk",
-          "state": "Idle",
+          "state": "Running # 317288 meta-qcom-qcom-distro-29313051401-1-boot test [q-github-bot]",
           "health": "Good"
         },
         {
@@ -293,7 +293,7 @@
           "worker_health": "Active",
           "device": "rb4-hyd-05",
           "type": "monaco-evk",
-          "state": "Idle",
+          "state": "Running # 317269 meta-qcom-qcom-distro-29313051401-1-boot test [q-github-bot]",
           "health": "Good"
         },
         {
@@ -365,7 +365,7 @@
           "worker_health": "Active",
           "device": "rb8-hyd-06",
           "type": "lemans-evk",
-          "state": "Idle",
+          "state": "Running # 317293 meta-qcom-qcom-distro-29313051401-1-boot test [q-github-bot]",
           "health": "Good"
         },
         {
@@ -383,7 +383,7 @@
           "worker_health": "Active",
           "device": "rb8-hyd-08",
           "type": "lemans-evk",
-          "state": "Idle",
+          "state": "Running # 317281 meta-qcom-qcom-distro-29313051401-1-boot test [q-github-bot]",
           "health": "Good"
         },
         {
@@ -410,23 +410,14 @@
           "worker_health": "Active",
           "device": "qcs615-adp-air-06",
           "type": "qcs615-ride",
-          "state": "Idle",
-          "health": "Good"
-        },
-        {
-          "worker": "ostt-lts-hyd-11",
-          "worker_state": "Online",
-          "worker_health": "Active",
-          "device": "shikra-hyd-06",
-          "type": "shikra-iqs-evk",
           "state": "",
           "health": "Maintenance"
         }
       ],
       "summary": {
-        "devices": 18,
+        "devices": 17,
         "workers": 10,
-        "online": 15,
+        "online": 14,
         "types": {
           "glymur-crd": 3,
           "lemans-evk": 3,
@@ -435,7 +426,7 @@
           "monaco-evk": 2,
           "qcs615-ride": 2,
           "qrb2210-arduino-imola": 2,
-          "shikra-iqs-evk": 2
+          "shikra-iqs-evk": 1
         }
       }
     }
