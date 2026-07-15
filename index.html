@@ -158,8 +158,7 @@ function renderTotals(){
   const parts = realKeys.map(k=>{
     const s = DATA.groups[k].summary;
     const on = (s.online!=null) ? ` <span style="font-size:13px;color:#34d399">(${s.online} good)</span>` : "";
-    const labels = {"hyd-workers":"Devices on hyd-worker","ostt-hyd-workers":"Device on ostt-hyd-worker"};
-    const label = labels[k] || k;
+    const label = "Device-on-" + k;
     return `<div class="tot"><div class="n">${s.devices}${on}</div><div class="l">${label}</div></div>`;
   });
   const grand = realKeys.reduce((a,k)=>a+DATA.groups[k].summary.devices,0);
