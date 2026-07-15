@@ -1,0 +1,6 @@
+# lava-device-dashboard has no third-party Python dependencies.
+# lava_scrape.py uses only the Python standard library
+# (glob, html, json, os, re, sys, datetime, urllib.request).
+#
+# Add runtime dependencies below, one per line, pinned where possible, e.g.:
+#   requests==2.32.3
