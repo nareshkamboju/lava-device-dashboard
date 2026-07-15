@@ -52,9 +52,9 @@
   th{color:var(--muted);text-transform:uppercase;font-size:11px;letter-spacing:.5px;cursor:pointer;position:sticky;top:0;background:var(--card);}
   tbody tr:hover{background:#16223d;}
   .pill{display:inline-block;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:700;color:#0b1220;}
-  td a{color:#93c5fd;text-decoration:none;}
-  td a:hover{text-decoration:underline;}
-  td a .pill{cursor:pointer;}
+  td .lnk{color:#93c5fd;cursor:pointer;user-select:none;}
+  td .lnk:hover{text-decoration:underline;}
+  td .lnk .pill{cursor:pointer;}
   code{background:#0b1220;padding:2px 6px;border-radius:6px;font-size:12px;color:#7dd3fc;}
   .tablewrap{max-height:520px;overflow:auto;border-radius:10px;}
   footer{color:var(--muted);font-size:12px;padding:0 32px 30px;}
@@ -216,10 +216,11 @@ function renderTable(){
   });
   const LAVA = "https://lava.infra.foundries.io";
   const enc = encodeURIComponent;
+  const link = (url) => `ondblclick="window.open('${url}','_blank','noopener')" title="Double-click to open in LAVA"`;
   document.getElementById("tbody").innerHTML = rows.map(r=>
-    `<tr><td>${r.worker ? `<a href="${LAVA}/scheduler/worker/${enc(r.worker)}" target="_blank" rel="noopener">${r.worker}</a>` : ''}</td>
-     <td>${r.device ? `<a href="${LAVA}/scheduler/device/${enc(r.device)}" target="_blank" rel="noopener">${r.device}</a>` : ''}</td>
-     <td>${r.type ? `<a href="${LAVA}/scheduler/device_type/${enc(r.type)}" target="_blank" rel="noopener"><span class="pill" style="background:${cmap[r.type]||'#64748b'}">${r.type}</span></a>` : ''}</td>
+    `<tr><td>${r.worker ? `<span class="lnk" ${link(`${LAVA}/scheduler/worker/${enc(r.worker)}`)}>${r.worker}</span>` : ''}</td>
+     <td>${r.device ? `<span class="lnk" ${link(`${LAVA}/scheduler/device/${enc(r.device)}`)}>${r.device}</span>` : ''}</td>
+     <td>${r.type ? `<span class="lnk" ${link(`${LAVA}/scheduler/device_type/${enc(r.type)}`)}><span class="pill" style="background:${cmap[r.type]||'#64748b'}">${r.type}</span></span>` : ''}</td>
      <td>${r.state||''}</td>
      <td class="${healthClass(r.health)}">${r.health||''}</td></tr>`).join("");
   document.getElementById("count").textContent = rows.length + " rows";
