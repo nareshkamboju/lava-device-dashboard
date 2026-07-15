@@ -14,7 +14,10 @@ worker-configs/ is discovered in this order:
 """
 import glob, html, json, os, re, sys, datetime, urllib.request
 
+# Default (production) LAVA instance. Individual groups may override this via
+# the "base" key in GROUPS below (e.g. workers on the staging instance).
 BASE = "https://lava.infra.foundries.io"
+STAGING = "https://lava-staging.infra.foundries.io"
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -36,10 +39,12 @@ def find_worker_configs():
 ROOT = find_worker_configs()
 OUT = sys.argv[1] if len(sys.argv) > 1 else "/tmp/lava-device-dashboard"
 
-# Groups: which worker-name prefixes belong to which dashboard tab.
+# Groups: which worker-name prefixes belong to which dashboard tab, and which
+# LAVA instance ("base") serves them. hyd-worker-* live on the staging
+# instance; anything without a "base" falls back to BASE (production).
 GROUPS = {
-    "hyd-workers": ("hyd-worker",),
-    "ostt-hyd-workers": ("ostt-lts-hyd",),
+    "hyd-workers": {"prefixes": ("hyd-worker",), "base": STAGING},
+    "ostt-hyd-workers": {"prefixes": ("ostt-lts-hyd",), "base": STAGING},
 }
 
 
@@ -104,12 +109,12 @@ def parse_worker(page):
     return state, health, devices
 
 
-def collect(prefixes):
+def collect(prefixes, base=BASE):
     rows = []
     for w in worker_names():
         if not any(w.startswith(p) for p in prefixes):
             continue
-        url = f"{BASE}/scheduler/worker/{w}"
+        url = f"{base}/scheduler/worker/{w}"
         try:
             page = fetch(url)
         except Exception as e:  # noqa: BLE001
@@ -148,13 +153,18 @@ def summarize(rows):
 
 def main():
     groups = {}
-    for gname, prefixes in GROUPS.items():
-        rows = collect(prefixes)
+    bases = set()
+    for gname, cfg in GROUPS.items():
+        prefixes = cfg["prefixes"]
+        base = cfg.get("base", BASE)
+        bases.add(base)
+        rows = collect(prefixes, base)
         groups[gname] = {"rows": rows, "summary": summarize(rows)}
 
+    hosts = ", ".join(sorted(b.split("://", 1)[-1].rstrip("/") for b in bases))
     data = {
         "generated": datetime.datetime.now().strftime("%Y-%m-%d %H:%M"),
-        "source": "live: lava.infra.foundries.io/scheduler/worker/<name>",
+        "source": f"live: {hosts}/scheduler/worker/<name>",
         "groups": groups,
     }
 
