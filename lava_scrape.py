@@ -14,10 +14,11 @@ worker-configs/ is discovered in this order:
 """
 import glob, html, json, os, re, sys, datetime, urllib.request
 
-# Default (production) LAVA instance. Individual groups may override this via
-# the "base" key in GROUPS below (e.g. workers on the staging instance).
+# Production LAVA instance and the lava-dispatcher-config branch that describes
+# it. Worker names are read from that branch's worker-configs/ so the dashboard
+# always tracks production regardless of which branch is checked out locally.
 BASE = "https://lava.infra.foundries.io"
-STAGING = "https://lava-staging.infra.foundries.io"
+CONFIG_REF = os.environ.get("WORKER_CONFIGS_REF", "origin/production")
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -37,18 +38,41 @@ def find_worker_configs():
 
 
 ROOT = find_worker_configs()
+# Repo root that owns worker-configs/ (parent of ROOT), used for git ls-tree.
+ROOT_REPO = os.path.dirname(os.path.abspath(ROOT))
 OUT = sys.argv[1] if len(sys.argv) > 1 else "/tmp/lava-device-dashboard"
 
-# Groups: which worker-name prefixes belong to which dashboard tab, and which
-# LAVA instance ("base") serves them. hyd-worker-* live on the staging
-# instance; anything without a "base" falls back to BASE (production).
+# Groups: which worker-name prefixes belong to which dashboard tab. All hyd
+# groups are served by the production instance (BASE); a per-group "base" may
+# still be supplied to override it.
 GROUPS = {
-    "hyd-workers": {"prefixes": ("hyd-worker",), "base": STAGING},
-    "ostt-hyd-workers": {"prefixes": ("ostt-lts-hyd",), "base": STAGING},
+    "hyd-workers": {"prefixes": ("hyd-worker",)},
+    "ostt-hyd-workers": {"prefixes": ("ostt-lts-hyd",)},
 }
 
 
 def worker_names():
+    """Worker directory names from the production branch of the config repo.
+
+    Reads worker-configs/ from CONFIG_REF (default origin/production) so the
+    dashboard tracks the production LAVA fleet regardless of the branch that
+    happens to be checked out. Falls back to the working-tree directory if the
+    ref/git is unavailable.
+    """
+    import subprocess
+
+    try:
+        out = subprocess.check_output(
+            ["git", "-C", ROOT_REPO, "ls-tree", "--name-only", f"{CONFIG_REF}:worker-configs"],
+            stderr=subprocess.DEVNULL,
+            text=True,
+        )
+        names = {line.strip() for line in out.splitlines() if line.strip()}
+        if names:
+            return sorted(names)
+    except Exception as e:  # noqa: BLE001
+        print(f"WARN: falling back to working-tree worker-configs ({e})", file=sys.stderr)
+
     names = set()
     for p in glob.glob(f"{ROOT}/*/"):
         names.add(p.rstrip("/").split("/")[-1])
