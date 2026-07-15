@@ -1,14 +1,66 @@
 {
-  "generated": "2026-07-15 00:00",
-  "source": "live: lava.infra.foundries.io/scheduler/worker/<name>",
+  "generated": "2026-07-15 04:55",
+  "source": "live: lava-staging.infra.foundries.io/scheduler/worker/<name>",
   "groups": {
     "hyd-workers": {
-      "rows": [],
+      "rows": [
+        {
+          "worker": "hyd-worker-13",
+          "worker_state": "Online",
+          "worker_health": "Active",
+          "device": "shikra-hyd-01",
+          "type": "shikra-iqs-evk",
+          "state": "Idle",
+          "health": "Good"
+        },
+        {
+          "worker": "hyd-worker-21",
+          "worker_state": "Online",
+          "worker_health": "Active",
+          "device": "glymur-hyd-01",
+          "type": "glymur-crd",
+          "state": "Idle",
+          "health": "Good"
+        },
+        {
+          "worker": "hyd-worker-21",
+          "worker_state": "Online",
+          "worker_health": "Active",
+          "device": "kaanapali-mtp-01",
+          "type": "kaanapali-mtp",
+          "state": "Idle",
+          "health": "Good"
+        },
+        {
+          "worker": "hyd-worker-21",
+          "worker_state": "Online",
+          "worker_health": "Active",
+          "device": "monza-hyd-01",
+          "type": "monaco-arduino-monza",
+          "state": "Idle",
+          "health": "Good"
+        },
+        {
+          "worker": "hyd-worker-21",
+          "worker_state": "Online",
+          "worker_health": "Active",
+          "device": "pakala-hyd-01",
+          "type": "sm8750-mtp",
+          "state": "Idle",
+          "health": "Good"
+        }
+      ],
       "summary": {
-        "devices": 0,
-        "workers": 0,
-        "online": 0,
-        "types": {}
+        "devices": 5,
+        "workers": 2,
+        "online": 5,
+        "types": {
+          "glymur-crd": 1,
+          "kaanapali-mtp": 1,
+          "monaco-arduino-monza": 1,
+          "shikra-iqs-evk": 1,
+          "sm8750-mtp": 1
+        }
       }
     },
     "ostt-hyd-workers": {
