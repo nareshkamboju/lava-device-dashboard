@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-15 12:03",
+  "generated": "2026-07-15 18:00",
   "source": "live: lava.infra.foundries.io/scheduler/worker/<name>",
   "groups": {
     "hyd-workers": {
@@ -10,7 +10,7 @@
           "worker_health": "Active",
           "device": "glymur-hyd-04",
           "type": "glymur-crd",
-          "state": "Running # 321086 meta-qcom-qcom-distro-29441988458-1-pre-merge-bt [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -28,7 +28,7 @@
           "worker_health": "Active",
           "device": "glymur-hyd-05",
           "type": "glymur-crd",
-          "state": "Running # 321057 meta-qcom-qcom-distro-29441815397-1-pre-merge-basic [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -37,7 +37,7 @@
           "worker_health": "Active",
           "device": "lemans-hyd-01",
           "type": "qcs9100-ride",
-          "state": "Running # 321069 meta-qcom-qcom-distro-29441815397-1-pre-merge-display-gfx [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -46,7 +46,7 @@
           "worker_health": "Active",
           "device": "hamoa-iot-evk-04",
           "type": "hamoa-iot-evk",
-          "state": "Running # 321068 meta-qcom-qcom-distro-29441815397-1-pre-merge-display-gfx [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -55,7 +55,7 @@
           "worker_health": "Active",
           "device": "rb3g2-hyd-01",
           "type": "qcs6490-rb3gen2",
-          "state": "Running # 321078 meta-qcom-qcom-distro-29441815397-1-pre-merge-display-gfx [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -82,7 +82,7 @@
           "worker_health": "Active",
           "device": "qcs8300-ride-hyd-01",
           "type": "monaco-ride",
-          "state": "Running # 321072 meta-qcom-qcom-distro-29441815397-1-pre-merge-display-gfx [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -100,7 +100,7 @@
           "worker_health": "Active",
           "device": "rb8-hyd-02",
           "type": "lemans-evk",
-          "state": "Running # 321082 meta-qcom-qcom-distro-29441815397-1-pre-merge-camera [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -118,7 +118,7 @@
           "worker_health": "Active",
           "device": "qcs8300-ride-hyd-02",
           "type": "monaco-ride",
-          "state": "Running # 321109 meta-qcom-qcom-distro-29441988458-1-pre-merge-basic [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -145,7 +145,7 @@
           "worker_health": "Active",
           "device": "rb8-hyd-03",
           "type": "lemans-evk",
-          "state": "Running # 321049 meta-qcom-qcom-distro-29441815397-1-pre-merge-basic [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -199,7 +199,7 @@
           "worker_health": "Active",
           "device": "kaanapali-mtp-04",
           "type": "kaanapali-mtp",
-          "state": "Running # 321126 meta-qcom-qcom-distro-29441988458-1-pre-merge-basic [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -208,7 +208,7 @@
           "worker_health": "Active",
           "device": "rb4-hyd-03",
           "type": "monaco-evk",
-          "state": "Running # 321073 meta-qcom-qcom-distro-29441815397-1-pre-merge-audio [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -266,7 +266,7 @@
           "worker_health": "Active",
           "device": "rb4-hyd-04",
           "type": "monaco-evk",
-          "state": "Running # 321054 meta-qcom-qcom-distro-29441815397-1-pre-merge-basic [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -293,7 +293,7 @@
           "worker_health": "Active",
           "device": "rb4-hyd-05",
           "type": "monaco-evk",
-          "state": "Running # 321060 meta-qcom-qcom-distro-29441815397-1-pre-merge-gstr-video [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -311,7 +311,7 @@
           "worker_health": "Active",
           "device": "glymur-hyd-06",
           "type": "glymur-crd",
-          "state": "Running # 321101 meta-qcom-qcom-distro-29441988458-1-pre-merge-basic [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -329,7 +329,7 @@
           "worker_health": "Active",
           "device": "glymur-hyd-07",
           "type": "glymur-crd",
-          "state": "Running # 321084 meta-qcom-qcom-distro-29441988458-1-pre-merge-audio [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -338,7 +338,7 @@
           "worker_health": "Active",
           "device": "kaanapali-mtp-05",
           "type": "kaanapali-mtp",
-          "state": "Running # 321119 meta-qcom-qcom-distro-29441988458-1-pre-merge-display-gfx [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -347,7 +347,7 @@
           "worker_health": "Active",
           "device": "hamoa-iot-evk-07",
           "type": "hamoa-iot-evk",
-          "state": "Running # 321081 meta-qcom-qcom-distro-29441815397-1-pre-merge-gstr-video [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -401,7 +401,7 @@
           "worker_health": "Active",
           "device": "hamoa-iot-evk-06",
           "type": "hamoa-iot-evk",
-          "state": "Running # 321052 meta-qcom-qcom-distro-29441815397-1-pre-merge-basic [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
