@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-18 18:00",
+  "generated": "2026-07-19 00:00",
   "source": "live: lava.infra.foundries.io/scheduler/worker/<name>",
   "groups": {
     "hyd-workers": {
@@ -28,8 +28,8 @@
           "worker_health": "Active",
           "device": "glymur-hyd-05",
           "type": "glymur-crd",
-          "state": "Idle",
-          "health": "Good"
+          "state": "",
+          "health": "Bad"
         },
         {
           "worker": "hyd-worker-03",
@@ -242,7 +242,7 @@
       "summary": {
         "devices": 26,
         "workers": 20,
-        "online": 23,
+        "online": 22,
         "types": {
           "shikra-iqs-evk": 4,
           "sm8750-mtp": 4,
