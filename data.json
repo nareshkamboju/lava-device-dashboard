@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-19 18:00",
+  "generated": "2026-07-20 00:00",
   "source": "live: lava.infra.foundries.io/scheduler/worker/<name>",
   "groups": {
     "hyd-workers": {
@@ -28,8 +28,8 @@
           "worker_health": "Active",
           "device": "glymur-hyd-05",
           "type": "glymur-crd",
-          "state": "",
-          "health": "Bad"
+          "state": "Idle",
+          "health": "Good"
         },
         {
           "worker": "hyd-worker-03",
@@ -38,7 +38,7 @@
           "device": "lemans-hyd-01",
           "type": "qcs9100-ride",
           "state": "",
-          "health": "Bad"
+          "health": "Maintenance"
         },
         {
           "worker": "hyd-worker-04",
@@ -46,7 +46,7 @@
           "worker_health": "Active",
           "device": "hamoa-iot-evk-04",
           "type": "hamoa-iot-evk",
-          "state": "Idle",
+          "state": "Running # 325468 meta-qcom-qcom-distro-29721921336-1-pre-merge-display-gfx [q-github-bot]",
           "health": "Good"
         },
         {
@@ -242,7 +242,7 @@
       "summary": {
         "devices": 26,
         "workers": 20,
-        "online": 22,
+        "online": 23,
         "types": {
           "shikra-iqs-evk": 4,
           "sm8750-mtp": 4,
