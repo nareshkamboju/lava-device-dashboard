@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-20 00:00",
+  "generated": "2026-07-20 06:00",
   "source": "live: lava.infra.foundries.io/scheduler/worker/<name>",
   "groups": {
     "hyd-workers": {
@@ -37,8 +37,8 @@
           "worker_health": "Active",
           "device": "lemans-hyd-01",
           "type": "qcs9100-ride",
-          "state": "",
-          "health": "Maintenance"
+          "state": "Idle",
+          "health": "Good"
         },
         {
           "worker": "hyd-worker-04",
@@ -46,7 +46,7 @@
           "worker_health": "Active",
           "device": "hamoa-iot-evk-04",
           "type": "hamoa-iot-evk",
-          "state": "Running # 325468 meta-qcom-qcom-distro-29721921336-1-pre-merge-display-gfx [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -242,7 +242,7 @@
       "summary": {
         "devices": 26,
         "workers": 20,
-        "online": 23,
+        "online": 24,
         "types": {
           "shikra-iqs-evk": 4,
           "sm8750-mtp": 4,
