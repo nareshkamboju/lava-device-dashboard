@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-21 04:45",
+  "generated": "2026-07-21 06:00",
   "source": "live: lava.infra.foundries.io/scheduler/worker/<name>",
   "groups": {
     "hyd-workers": {
@@ -55,7 +55,7 @@
           "worker_health": "Active",
           "device": "rb3g2-hyd-01",
           "type": "qcs6490-rb3gen2",
-          "state": "Idle",
+          "state": "Running # 327384 meta-qcom-qcom-distro-29829135409-1-pre-merge-audio [q-github-bot]",
           "health": "Good"
         },
         {
@@ -82,8 +82,8 @@
           "worker_health": "Active",
           "device": "qcs8300-ride-hyd-01",
           "type": "monaco-ride",
-          "state": "Idle",
-          "health": "Good"
+          "state": "",
+          "health": "Bad"
         },
         {
           "worker": "hyd-worker-09",
@@ -109,8 +109,8 @@
           "worker_health": "Active",
           "device": "shikra-hyd-02",
           "type": "shikra-iqs-evk",
-          "state": "Idle",
-          "health": "Good"
+          "state": "",
+          "health": "Bad"
         },
         {
           "worker": "hyd-worker-14",
@@ -118,7 +118,7 @@
           "worker_health": "Active",
           "device": "qcs8300-ride-hyd-02",
           "type": "monaco-ride",
-          "state": "Idle",
+          "state": "Running # 327425 meta-qcom-qcom-distro-29829135409-1-pre-merge-display-gfx [q-github-bot]",
           "health": "Good"
         },
         {
@@ -208,8 +208,8 @@
           "worker_health": "Active",
           "device": "rb4-hyd-03",
           "type": "monaco-evk",
-          "state": "",
-          "health": "Bad"
+          "state": "Running # 326930 meta-qcom-qcom-distro-29781200294-1-pre-merge-display-gfx [q-github-bot]",
+          "health": "Good"
         },
         {
           "worker": "hyd-worker-24",
@@ -242,7 +242,7 @@
       "summary": {
         "devices": 26,
         "workers": 20,
-        "online": 17,
+        "online": 16,
         "types": {
           "shikra-iqs-evk": 4,
           "sm8750-mtp": 4,
@@ -266,8 +266,8 @@
           "worker_health": "Active",
           "device": "rb4-hyd-04",
           "type": "monaco-evk",
-          "state": "",
-          "health": "Bad"
+          "state": "Running # 327423 meta-qcom-qcom-distro-29829135409-1-pre-merge-gstr-video [q-github-bot]",
+          "health": "Good"
         },
         {
           "worker": "ostt-lts-hyd-01",
@@ -293,8 +293,8 @@
           "worker_health": "Active",
           "device": "rb4-hyd-05",
           "type": "monaco-evk",
-          "state": "",
-          "health": "Bad"
+          "state": "Running # 327399 meta-qcom-qcom-distro-29829135409-1-pre-merge-basic [q-github-bot]",
+          "health": "Good"
         },
         {
           "worker": "ostt-lts-hyd-02",
@@ -426,7 +426,7 @@
       "summary": {
         "devices": 18,
         "workers": 10,
-        "online": 9,
+        "online": 11,
         "types": {
           "glymur-crd": 3,
           "lemans-evk": 3,
