@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-20 18:00",
+  "generated": "2026-07-21 00:00",
   "source": "live: lava.infra.foundries.io/scheduler/worker/<name>",
   "groups": {
     "hyd-workers": {
@@ -46,8 +46,8 @@
           "worker_health": "Active",
           "device": "hamoa-iot-evk-04",
           "type": "hamoa-iot-evk",
-          "state": "Running # 326726 meta-qcom-qcom-distro-29624693520-7-pre-merge-display-gfx [q-github-bot]",
-          "health": "Good"
+          "state": "",
+          "health": "Bad"
         },
         {
           "worker": "hyd-worker-05",
@@ -242,7 +242,7 @@
       "summary": {
         "devices": 26,
         "workers": 20,
-        "online": 23,
+        "online": 22,
         "types": {
           "shikra-iqs-evk": 4,
           "sm8750-mtp": 4,
@@ -293,8 +293,8 @@
           "worker_health": "Active",
           "device": "rb4-hyd-05",
           "type": "monaco-evk",
-          "state": "Idle",
-          "health": "Good"
+          "state": "",
+          "health": "Bad"
         },
         {
           "worker": "ostt-lts-hyd-02",
@@ -347,8 +347,8 @@
           "worker_health": "Active",
           "device": "hamoa-iot-evk-07",
           "type": "hamoa-iot-evk",
-          "state": "Idle",
-          "health": "Good"
+          "state": "",
+          "health": "Bad"
         },
         {
           "worker": "ostt-lts-hyd-06",
@@ -401,8 +401,8 @@
           "worker_health": "Active",
           "device": "hamoa-iot-evk-06",
           "type": "hamoa-iot-evk",
-          "state": "Idle",
-          "health": "Good"
+          "state": "",
+          "health": "Bad"
         },
         {
           "worker": "ostt-lts-hyd-11",
@@ -426,7 +426,7 @@
       "summary": {
         "devices": 18,
         "workers": 10,
-        "online": 15,
+        "online": 12,
         "types": {
           "glymur-crd": 3,
           "lemans-evk": 3,
