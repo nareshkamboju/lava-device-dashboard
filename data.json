@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-21 06:46",
+  "generated": "2026-07-21 12:00",
   "source": "live: lava.infra.foundries.io/scheduler/worker/<name>",
   "groups": {
     "hyd-workers": {
@@ -32,12 +32,21 @@
           "health": "Good"
         },
         {
+          "worker": "hyd-worker-03",
+          "worker_state": "Online",
+          "worker_health": "Active",
+          "device": "lemans-hyd-01",
+          "type": "qcs9100-ride",
+          "state": "",
+          "health": "Bad"
+        },
+        {
           "worker": "hyd-worker-04",
           "worker_state": "Online",
           "worker_health": "Active",
           "device": "hamoa-iot-evk-04",
           "type": "hamoa-iot-evk",
-          "state": "Running # 327383 meta-qcom-qcom-distro-29829135409-1-pre-merge-display-gfx [q-github-bot]",
+          "state": "Running # 327705 meta-qcom-qcom-distro-29806057401-1-pre-merge-display-gfx [q-github-bot]",
           "health": "Good"
         },
         {
@@ -64,6 +73,15 @@
           "worker_health": "Active",
           "device": "qemu-hyd-02",
           "type": "qemu",
+          "state": "Idle",
+          "health": "Good"
+        },
+        {
+          "worker": "hyd-worker-08",
+          "worker_state": "Online",
+          "worker_health": "Active",
+          "device": "qcs8300-ride-hyd-01",
+          "type": "monaco-ride",
           "state": "Idle",
           "health": "Good"
         },
@@ -190,7 +208,7 @@
           "worker_health": "Active",
           "device": "rb4-hyd-03",
           "type": "monaco-evk",
-          "state": "Running # 327394 meta-qcom-qcom-distro-29829135409-1-pre-merge-display-gfx [q-github-bot]",
+          "state": "Running # 327734 meta-qcom-qcom-distro-29806057401-2-pre-merge-display-gfx [q-github-bot]",
           "health": "Good"
         },
         {
@@ -222,9 +240,9 @@
         }
       ],
       "summary": {
-        "devices": 24,
-        "workers": 19,
-        "online": 22,
+        "devices": 26,
+        "workers": 20,
+        "online": 23,
         "types": {
           "shikra-iqs-evk": 4,
           "sm8750-mtp": 4,
@@ -232,10 +250,11 @@
           "kaanapali-mtp": 3,
           "lemans-evk": 2,
           "monaco-evk": 2,
+          "monaco-ride": 2,
           "qcs6490-rb3gen2": 2,
           "qemu": 2,
           "hamoa-iot-evk": 1,
-          "monaco-ride": 1
+          "qcs9100-ride": 1
         }
       }
     },
@@ -260,11 +279,29 @@
           "health": "Good"
         },
         {
+          "worker": "ostt-lts-hyd-01",
+          "worker_state": "Online",
+          "worker_health": "Active",
+          "device": "unoq-04",
+          "type": "qrb2210-arduino-imola",
+          "state": "Idle",
+          "health": "Good"
+        },
+        {
           "worker": "ostt-lts-hyd-02",
           "worker_state": "Online",
           "worker_health": "Active",
           "device": "rb4-hyd-05",
           "type": "monaco-evk",
+          "state": "Idle",
+          "health": "Good"
+        },
+        {
+          "worker": "ostt-lts-hyd-02",
+          "worker_state": "Online",
+          "worker_health": "Active",
+          "device": "unoq-05",
+          "type": "qrb2210-arduino-imola",
           "state": "Idle",
           "health": "Good"
         },
@@ -341,6 +378,15 @@
           "health": "Good"
         },
         {
+          "worker": "ostt-lts-hyd-08",
+          "worker_state": "Online",
+          "worker_health": "Active",
+          "device": "rb8-hyd-08",
+          "type": "lemans-evk",
+          "state": "Idle",
+          "health": "Good"
+        },
+        {
           "worker": "ostt-lts-hyd-09",
           "worker_state": "Online",
           "worker_health": "Active",
@@ -348,6 +394,15 @@
           "type": "glymur-crd",
           "state": "",
           "health": "Maintenance"
+        },
+        {
+          "worker": "ostt-lts-hyd-09",
+          "worker_state": "Online",
+          "worker_health": "Active",
+          "device": "hamoa-iot-evk-06",
+          "type": "hamoa-iot-evk",
+          "state": "",
+          "health": "Bad"
         },
         {
           "worker": "ostt-lts-hyd-11",
@@ -369,17 +424,18 @@
         }
       ],
       "summary": {
-        "devices": 14,
-        "workers": 9,
-        "online": 11,
+        "devices": 18,
+        "workers": 10,
+        "online": 14,
         "types": {
           "glymur-crd": 3,
+          "lemans-evk": 3,
+          "hamoa-iot-evk": 2,
           "kaanapali-mtp": 2,
-          "lemans-evk": 2,
           "monaco-evk": 2,
           "qcs615-ride": 2,
-          "shikra-iqs-evk": 2,
-          "hamoa-iot-evk": 1
+          "qrb2210-arduino-imola": 2,
+          "shikra-iqs-evk": 2
         }
       }
     }
