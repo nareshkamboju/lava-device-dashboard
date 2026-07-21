@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-21 00:00",
+  "generated": "2026-07-21 02:24",
   "source": "live: lava.infra.foundries.io/scheduler/worker/<name>",
   "groups": {
     "hyd-workers": {
@@ -37,8 +37,8 @@
           "worker_health": "Active",
           "device": "lemans-hyd-01",
           "type": "qcs9100-ride",
-          "state": "Idle",
-          "health": "Good"
+          "state": "",
+          "health": "Bad"
         },
         {
           "worker": "hyd-worker-04",
@@ -242,7 +242,7 @@
       "summary": {
         "devices": 26,
         "workers": 20,
-        "online": 22,
+        "online": 21,
         "types": {
           "shikra-iqs-evk": 4,
           "sm8750-mtp": 4,
@@ -266,8 +266,8 @@
           "worker_health": "Active",
           "device": "rb4-hyd-04",
           "type": "monaco-evk",
-          "state": "Idle",
-          "health": "Good"
+          "state": "",
+          "health": "Bad"
         },
         {
           "worker": "ostt-lts-hyd-01",
@@ -284,8 +284,8 @@
           "worker_health": "Active",
           "device": "unoq-04",
           "type": "qrb2210-arduino-imola",
-          "state": "Idle",
-          "health": "Good"
+          "state": "",
+          "health": "Bad"
         },
         {
           "worker": "ostt-lts-hyd-02",
@@ -302,8 +302,8 @@
           "worker_health": "Active",
           "device": "unoq-05",
           "type": "qrb2210-arduino-imola",
-          "state": "Idle",
-          "health": "Good"
+          "state": "",
+          "health": "Bad"
         },
         {
           "worker": "ostt-lts-hyd-03",
@@ -426,7 +426,7 @@
       "summary": {
         "devices": 18,
         "workers": 10,
-        "online": 12,
+        "online": 9,
         "types": {
           "glymur-crd": 3,
           "lemans-evk": 3,
