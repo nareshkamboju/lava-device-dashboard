@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-22 06:00",
+  "generated": "2026-07-22 12:00",
   "source": "live: lava.infra.foundries.io/scheduler/worker/<name>",
   "groups": {
     "hyd-workers": {
@@ -127,8 +127,8 @@
           "worker_health": "Active",
           "device": "shikra-hyd-03",
           "type": "shikra-iqs-evk",
-          "state": "Idle",
-          "health": "Good"
+          "state": "",
+          "health": "Maintenance"
         },
         {
           "worker": "hyd-worker-16",
@@ -242,7 +242,7 @@
       "summary": {
         "devices": 26,
         "workers": 20,
-        "online": 24,
+        "online": 23,
         "types": {
           "shikra-iqs-evk": 4,
           "sm8750-mtp": 4,
@@ -266,8 +266,8 @@
           "worker_health": "Active",
           "device": "rb4-hyd-04",
           "type": "monaco-evk",
-          "state": "",
-          "health": "Bad"
+          "state": "Idle",
+          "health": "Good"
         },
         {
           "worker": "ostt-lts-hyd-01",
@@ -426,7 +426,7 @@
       "summary": {
         "devices": 18,
         "workers": 10,
-        "online": 14,
+        "online": 15,
         "types": {
           "glymur-crd": 3,
           "lemans-evk": 3,
