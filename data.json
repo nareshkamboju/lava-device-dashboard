@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-23 00:00",
+  "generated": "2026-07-23 06:00",
   "source": "live: lava.infra.foundries.io/scheduler/worker/<name>",
   "groups": {
     "hyd-workers": {
@@ -122,24 +122,6 @@
           "health": "Good"
         },
         {
-          "worker": "hyd-worker-15",
-          "worker_state": "Online",
-          "worker_health": "Active",
-          "device": "shikra-hyd-03",
-          "type": "shikra-iqs-evk",
-          "state": "Idle",
-          "health": "Good"
-        },
-        {
-          "worker": "hyd-worker-16",
-          "worker_state": "Online",
-          "worker_health": "Active",
-          "device": "shikra-hyd-04",
-          "type": "shikra-iqs-evk",
-          "state": "Idle",
-          "health": "Good"
-        },
-        {
           "worker": "hyd-worker-17",
           "worker_state": "Online",
           "worker_health": "Active",
@@ -240,11 +222,10 @@
         }
       ],
       "summary": {
-        "devices": 26,
-        "workers": 20,
-        "online": 24,
+        "devices": 24,
+        "workers": 18,
+        "online": 22,
         "types": {
-          "shikra-iqs-evk": 4,
           "sm8750-mtp": 4,
           "glymur-crd": 3,
           "kaanapali-mtp": 3,
@@ -253,6 +234,7 @@
           "monaco-ride": 2,
           "qcs6490-rb3gen2": 2,
           "qemu": 2,
+          "shikra-iqs-evk": 2,
           "hamoa-iot-evk": 1,
           "qcs9100-ride": 1
         }
