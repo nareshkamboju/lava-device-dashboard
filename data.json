@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-24 12:00",
+  "generated": "2026-07-24 18:00",
   "source": "live: lava.infra.foundries.io/scheduler/worker/<name>",
   "groups": {
     "hyd-workers": {
@@ -46,7 +46,7 @@
           "worker_health": "Active",
           "device": "hamoa-iot-evk-04",
           "type": "hamoa-iot-evk",
-          "state": "Idle",
+          "state": "Running # 333681 meta-qcom-qcom-distro-30128003723-1-pre-merge-display-gfx [q-github-bot]",
           "health": "Good"
         },
         {
