@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-25 18:00",
+  "generated": "2026-07-26 00:00",
   "source": "live: lava.infra.foundries.io/scheduler/worker/<name>",
   "groups": {
     "hyd-workers": {
@@ -369,15 +369,6 @@
           "health": "Good"
         },
         {
-          "worker": "ostt-lts-hyd-07",
-          "worker_state": "Online",
-          "worker_health": "Active",
-          "device": "rb8-hyd-07",
-          "type": "lemans-evk",
-          "state": "Idle",
-          "health": "Good"
-        },
-        {
           "worker": "ostt-lts-hyd-08",
           "worker_state": "Online",
           "worker_health": "Active",
@@ -424,14 +415,14 @@
         }
       ],
       "summary": {
-        "devices": 18,
-        "workers": 10,
-        "online": 15,
+        "devices": 17,
+        "workers": 9,
+        "online": 14,
         "types": {
           "glymur-crd": 3,
-          "lemans-evk": 3,
           "hamoa-iot-evk": 2,
           "kaanapali-mtp": 2,
+          "lemans-evk": 2,
           "monaco-evk": 2,
           "qcs615-ride": 2,
           "qrb2210-arduino-imola": 2,
