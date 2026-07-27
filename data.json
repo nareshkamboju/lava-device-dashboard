@@ -1,27 +1,9 @@
 {
-  "generated": "2026-07-26 18:00",
+  "generated": "2026-07-27 00:00",
   "source": "live: lava.infra.foundries.io/scheduler/worker/<name>",
   "groups": {
     "hyd-workers": {
       "rows": [
-        {
-          "worker": "hyd-worker-01",
-          "worker_state": "Online",
-          "worker_health": "Active",
-          "device": "glymur-hyd-04",
-          "type": "glymur-crd",
-          "state": "Idle",
-          "health": "Good"
-        },
-        {
-          "worker": "hyd-worker-01",
-          "worker_state": "Online",
-          "worker_health": "Active",
-          "device": "qemu-hyd-01",
-          "type": "qemu",
-          "state": "Idle",
-          "health": "Good"
-        },
         {
           "worker": "hyd-worker-03",
           "worker_state": "Online",
@@ -46,7 +28,7 @@
           "worker_health": "Active",
           "device": "hamoa-iot-evk-04",
           "type": "hamoa-iot-evk",
-          "state": "Running # 334474 meta-qcom-qcom-distro-30132325708-2-pre-merge-display-gfx [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -100,7 +82,7 @@
           "worker_health": "Active",
           "device": "rb8-hyd-02",
           "type": "lemans-evk",
-          "state": "Running # 334471 meta-qcom-qcom-distro-30132325708-2-pre-merge-display-gfx [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -185,24 +167,6 @@
           "health": "Good"
         },
         {
-          "worker": "hyd-worker-20",
-          "worker_state": "Online",
-          "worker_health": "Active",
-          "device": "glymur-hyd-03",
-          "type": "glymur-crd",
-          "state": "Idle",
-          "health": "Good"
-        },
-        {
-          "worker": "hyd-worker-20",
-          "worker_state": "Online",
-          "worker_health": "Active",
-          "device": "kaanapali-mtp-04",
-          "type": "kaanapali-mtp",
-          "state": "Idle",
-          "health": "Good"
-        },
-        {
           "worker": "hyd-worker-22",
           "worker_state": "Online",
           "worker_health": "Active",
@@ -240,21 +204,21 @@
         }
       ],
       "summary": {
-        "devices": 26,
-        "workers": 20,
-        "online": 22,
+        "devices": 22,
+        "workers": 18,
+        "online": 18,
         "types": {
           "shikra-iqs-evk": 4,
           "sm8750-mtp": 4,
-          "glymur-crd": 3,
-          "kaanapali-mtp": 3,
+          "kaanapali-mtp": 2,
           "lemans-evk": 2,
           "monaco-evk": 2,
           "monaco-ride": 2,
           "qcs6490-rb3gen2": 2,
-          "qemu": 2,
+          "glymur-crd": 1,
           "hamoa-iot-evk": 1,
-          "qcs9100-ride": 1
+          "qcs9100-ride": 1,
+          "qemu": 1
         }
       }
     },
@@ -360,24 +324,6 @@
           "health": "Good"
         },
         {
-          "worker": "ostt-lts-hyd-06",
-          "worker_state": "Online",
-          "worker_health": "Active",
-          "device": "rb8-hyd-06",
-          "type": "lemans-evk",
-          "state": "Idle",
-          "health": "Good"
-        },
-        {
-          "worker": "ostt-lts-hyd-07",
-          "worker_state": "Online",
-          "worker_health": "Active",
-          "device": "rb8-hyd-07",
-          "type": "lemans-evk",
-          "state": "Idle",
-          "health": "Good"
-        },
-        {
           "worker": "ostt-lts-hyd-08",
           "worker_state": "Online",
           "worker_health": "Active",
@@ -424,18 +370,18 @@
         }
       ],
       "summary": {
-        "devices": 18,
-        "workers": 10,
-        "online": 15,
+        "devices": 16,
+        "workers": 9,
+        "online": 13,
         "types": {
           "glymur-crd": 3,
-          "lemans-evk": 3,
           "hamoa-iot-evk": 2,
           "kaanapali-mtp": 2,
           "monaco-evk": 2,
           "qcs615-ride": 2,
           "qrb2210-arduino-imola": 2,
-          "shikra-iqs-evk": 2
+          "shikra-iqs-evk": 2,
+          "lemans-evk": 1
         }
       }
     }
