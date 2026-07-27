@@ -1,9 +1,27 @@
 {
-  "generated": "2026-07-27 00:00",
+  "generated": "2026-07-27 06:00",
   "source": "live: lava.infra.foundries.io/scheduler/worker/<name>",
   "groups": {
     "hyd-workers": {
       "rows": [
+        {
+          "worker": "hyd-worker-01",
+          "worker_state": "Online",
+          "worker_health": "Active",
+          "device": "glymur-hyd-04",
+          "type": "glymur-crd",
+          "state": "Idle",
+          "health": "Good"
+        },
+        {
+          "worker": "hyd-worker-01",
+          "worker_state": "Online",
+          "worker_health": "Active",
+          "device": "qemu-hyd-01",
+          "type": "qemu",
+          "state": "Idle",
+          "health": "Good"
+        },
         {
           "worker": "hyd-worker-03",
           "worker_state": "Online",
@@ -28,7 +46,7 @@
           "worker_health": "Active",
           "device": "hamoa-iot-evk-04",
           "type": "hamoa-iot-evk",
-          "state": "Idle",
+          "state": "Running # 335123 meta-qcom-qcom-distro-30265603433-1-pre-merge-display-gfx [q-github-bot]",
           "health": "Good"
         },
         {
@@ -167,12 +185,30 @@
           "health": "Good"
         },
         {
+          "worker": "hyd-worker-20",
+          "worker_state": "Online",
+          "worker_health": "Active",
+          "device": "glymur-hyd-03",
+          "type": "glymur-crd",
+          "state": "Idle",
+          "health": "Good"
+        },
+        {
+          "worker": "hyd-worker-20",
+          "worker_state": "Online",
+          "worker_health": "Active",
+          "device": "kaanapali-mtp-04",
+          "type": "kaanapali-mtp",
+          "state": "Idle",
+          "health": "Good"
+        },
+        {
           "worker": "hyd-worker-22",
           "worker_state": "Online",
           "worker_health": "Active",
           "device": "rb4-hyd-03",
           "type": "monaco-evk",
-          "state": "Idle",
+          "state": "Running # 335121 meta-qcom-qcom-distro-30265603433-1-pre-merge-display-gfx [q-github-bot]",
           "health": "Good"
         },
         {
@@ -204,21 +240,21 @@
         }
       ],
       "summary": {
-        "devices": 22,
-        "workers": 18,
-        "online": 18,
+        "devices": 26,
+        "workers": 20,
+        "online": 22,
         "types": {
           "shikra-iqs-evk": 4,
           "sm8750-mtp": 4,
-          "kaanapali-mtp": 2,
+          "glymur-crd": 3,
+          "kaanapali-mtp": 3,
           "lemans-evk": 2,
           "monaco-evk": 2,
           "monaco-ride": 2,
           "qcs6490-rb3gen2": 2,
-          "glymur-crd": 1,
+          "qemu": 2,
           "hamoa-iot-evk": 1,
-          "qcs9100-ride": 1,
-          "qemu": 1
+          "qcs9100-ride": 1
         }
       }
     },
@@ -324,6 +360,24 @@
           "health": "Good"
         },
         {
+          "worker": "ostt-lts-hyd-06",
+          "worker_state": "Online",
+          "worker_health": "Active",
+          "device": "rb8-hyd-06",
+          "type": "lemans-evk",
+          "state": "Idle",
+          "health": "Good"
+        },
+        {
+          "worker": "ostt-lts-hyd-07",
+          "worker_state": "Online",
+          "worker_health": "Active",
+          "device": "rb8-hyd-07",
+          "type": "lemans-evk",
+          "state": "Idle",
+          "health": "Good"
+        },
+        {
           "worker": "ostt-lts-hyd-08",
           "worker_state": "Online",
           "worker_health": "Active",
@@ -370,18 +424,18 @@
         }
       ],
       "summary": {
-        "devices": 16,
-        "workers": 9,
-        "online": 13,
+        "devices": 18,
+        "workers": 10,
+        "online": 15,
         "types": {
           "glymur-crd": 3,
+          "lemans-evk": 3,
           "hamoa-iot-evk": 2,
           "kaanapali-mtp": 2,
           "monaco-evk": 2,
           "qcs615-ride": 2,
           "qrb2210-arduino-imola": 2,
-          "shikra-iqs-evk": 2,
-          "lemans-evk": 1
+          "shikra-iqs-evk": 2
         }
       }
     }
