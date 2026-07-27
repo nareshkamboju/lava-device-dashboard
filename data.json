@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-26 12:00",
+  "generated": "2026-07-26 18:00",
   "source": "live: lava.infra.foundries.io/scheduler/worker/<name>",
   "groups": {
     "hyd-workers": {
@@ -46,7 +46,7 @@
           "worker_health": "Active",
           "device": "hamoa-iot-evk-04",
           "type": "hamoa-iot-evk",
-          "state": "Idle",
+          "state": "Running # 334474 meta-qcom-qcom-distro-30132325708-2-pre-merge-display-gfx [q-github-bot]",
           "health": "Good"
         },
         {
@@ -100,7 +100,7 @@
           "worker_health": "Active",
           "device": "rb8-hyd-02",
           "type": "lemans-evk",
-          "state": "Idle",
+          "state": "Running # 334471 meta-qcom-qcom-distro-30132325708-2-pre-merge-display-gfx [q-github-bot]",
           "health": "Good"
         },
         {
