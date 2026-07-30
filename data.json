@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-30 06:00",
+  "generated": "2026-07-30 12:00",
   "source": "live: lava.infra.foundries.io/scheduler/worker/<name>",
   "groups": {
     "hyd-workers": {
@@ -145,7 +145,7 @@
           "worker_health": "Active",
           "device": "rb8-hyd-03",
           "type": "lemans-evk",
-          "state": "Running # 342734 boot test (iq-9075-evk) 30535624914 [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -208,7 +208,7 @@
           "worker_health": "Active",
           "device": "rb4-hyd-03",
           "type": "monaco-evk",
-          "state": "Running # 342729 meta-qcom-qcom-distro-30544488458-1-boot test [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -266,7 +266,7 @@
           "worker_health": "Active",
           "device": "rb4-hyd-04",
           "type": "monaco-evk",
-          "state": "Running # 342718 meta-qcom-qcom-distro-30544488458-1-boot test [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -293,8 +293,8 @@
           "worker_health": "Active",
           "device": "rb4-hyd-05",
           "type": "monaco-evk",
-          "state": "",
-          "health": "Bad"
+          "state": "Idle",
+          "health": "Good"
         },
         {
           "worker": "ostt-lts-hyd-02",
@@ -311,7 +311,7 @@
           "worker_health": "Active",
           "device": "glymur-hyd-06",
           "type": "glymur-crd",
-          "state": "Running # 342708 meta-qcom-qcom-distro-30544488458-1-boot test [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -401,7 +401,7 @@
           "worker_health": "Active",
           "device": "hamoa-iot-evk-06",
           "type": "hamoa-iot-evk",
-          "state": "Running # 342705 meta-qcom-qcom-distro-30544488458-1-boot test [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -426,7 +426,7 @@
       "summary": {
         "devices": 18,
         "workers": 10,
-        "online": 14,
+        "online": 15,
         "types": {
           "glymur-crd": 3,
           "lemans-evk": 3,
