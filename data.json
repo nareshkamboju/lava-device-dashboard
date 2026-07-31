@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-31 06:00",
+  "generated": "2026-07-31 12:00",
   "source": "live: lava.infra.foundries.io/scheduler/worker/<name>",
   "groups": {
     "hyd-workers": {
@@ -100,7 +100,7 @@
           "worker_health": "Active",
           "device": "rb8-hyd-02",
           "type": "lemans-evk",
-          "state": "Running # 345084 boot test (iq-9075-evk) 30625017274 [q-github-bot]",
+          "state": "Idle",
           "health": "Good"
         },
         {
@@ -421,16 +421,25 @@
           "type": "shikra-iqs-evk",
           "state": "Idle",
           "health": "Good"
+        },
+        {
+          "worker": "ostt-lts-hyd-12",
+          "worker_state": "Offline",
+          "worker_health": "Active",
+          "device": "hamoa-iot-evk-08",
+          "type": "hamoa-iot-evk",
+          "state": "Idle",
+          "health": "Unknown"
         }
       ],
       "summary": {
-        "devices": 18,
-        "workers": 10,
+        "devices": 19,
+        "workers": 11,
         "online": 15,
         "types": {
           "glymur-crd": 3,
+          "hamoa-iot-evk": 3,
           "lemans-evk": 3,
-          "hamoa-iot-evk": 2,
           "kaanapali-mtp": 2,
           "monaco-evk": 2,
           "qcs615-ride": 2,
