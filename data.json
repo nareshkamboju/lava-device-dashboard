@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-01 00:00",
+  "generated": "2026-08-01 06:00",
   "source": "live: lava.infra.foundries.io/scheduler/worker/<name>",
   "groups": {
     "hyd-workers": {
@@ -149,6 +149,24 @@
           "health": "Good"
         },
         {
+          "worker": "hyd-worker-18",
+          "worker_state": "Online",
+          "worker_health": "Active",
+          "device": "kaanapali-mtp-02",
+          "type": "kaanapali-mtp",
+          "state": "Idle",
+          "health": "Good"
+        },
+        {
+          "worker": "hyd-worker-18",
+          "worker_state": "Online",
+          "worker_health": "Active",
+          "device": "pakala-hyd-03",
+          "type": "sm8750-mtp",
+          "state": "Idle",
+          "health": "Good"
+        },
+        {
           "worker": "hyd-worker-19",
           "worker_state": "Online",
           "worker_health": "Active",
@@ -163,6 +181,24 @@
           "worker_health": "Active",
           "device": "pakala-hyd-02",
           "type": "sm8750-mtp",
+          "state": "Idle",
+          "health": "Good"
+        },
+        {
+          "worker": "hyd-worker-20",
+          "worker_state": "Online",
+          "worker_health": "Active",
+          "device": "glymur-hyd-03",
+          "type": "glymur-crd",
+          "state": "Idle",
+          "health": "Good"
+        },
+        {
+          "worker": "hyd-worker-20",
+          "worker_state": "Online",
+          "worker_health": "Active",
+          "device": "kaanapali-mtp-04",
+          "type": "kaanapali-mtp",
           "state": "Idle",
           "health": "Good"
         },
@@ -204,20 +240,20 @@
         }
       ],
       "summary": {
-        "devices": 22,
-        "workers": 18,
-        "online": 18,
+        "devices": 26,
+        "workers": 20,
+        "online": 22,
         "types": {
           "shikra-iqs-evk": 4,
-          "sm8750-mtp": 3,
-          "glymur-crd": 2,
+          "sm8750-mtp": 4,
+          "glymur-crd": 3,
+          "kaanapali-mtp": 3,
           "lemans-evk": 2,
           "monaco-evk": 2,
           "monaco-ride": 2,
           "qcs6490-rb3gen2": 2,
           "qemu": 2,
           "hamoa-iot-evk": 1,
-          "kaanapali-mtp": 1,
           "qcs9100-ride": 1
         }
       }
@@ -324,6 +360,15 @@
           "health": "Good"
         },
         {
+          "worker": "ostt-lts-hyd-06",
+          "worker_state": "Online",
+          "worker_health": "Active",
+          "device": "rb8-hyd-06",
+          "type": "lemans-evk",
+          "state": "Idle",
+          "health": "Good"
+        },
+        {
           "worker": "ostt-lts-hyd-07",
           "worker_state": "Online",
           "worker_health": "Active",
@@ -388,14 +433,14 @@
         }
       ],
       "summary": {
-        "devices": 18,
+        "devices": 19,
         "workers": 11,
-        "online": 14,
+        "online": 15,
         "types": {
           "glymur-crd": 3,
           "hamoa-iot-evk": 3,
+          "lemans-evk": 3,
           "kaanapali-mtp": 2,
-          "lemans-evk": 2,
           "monaco-evk": 2,
           "qcs615-ride": 2,
           "qrb2210-arduino-imola": 2,
